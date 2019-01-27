@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveIncidenteID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ticketnumber_arg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveIncidenteIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DevolveIncidenteIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncidente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="incidenteID_arg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncidenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncidenteResult" type="tns:clsIncidente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clsIncidente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClienteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClienteNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactoID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactoNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Resumo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataAbertura" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataInicio" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataFecho" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataSolucionamento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Prioridade" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrioridadeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RazaoEstado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SLASD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SLASD_Dec" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Assunto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClsAssunto" type="tns:clsAssunto" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProprietarioNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProprietarioID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Morada" type="tns:clsMorada" />
+          <s:element minOccurs="0" maxOccurs="1" name="AprovadoPor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataAprovacao" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Impacto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Urgencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DuracaoTotal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescontoTotal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DuracaoTotalLiquido" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DuracaoTotalDec" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DescontoTotalDec" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Validado" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacoes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrauSatisfacao" type="tns:eSatisfacao" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroRefeicoes" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroEstadias" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroDeslocacoesAC" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroDeslocacoes" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SolucionadoPorNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SolucionadoPorID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PeriodoSolucionamentoUltrapassado" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataNaoSolucionamento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Anexo" type="tns:clsAnexo" />
+          <s:element minOccurs="0" maxOccurs="1" name="TempoResolucao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoIncidente" type="tns:eTipoIncidente" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoAssistencia" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoPedido" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContratoID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinhaContratoID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotivoatrasoSlaSD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrigemID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoContrato" type="tns:eTipoContrato" />
+          <s:element minOccurs="1" maxOccurs="1" name="Agendamento" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmpresaID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CriadoPor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsAssunto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoAssuntoGeral" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDAssuntoGeral" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AssuntoInterno" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsMorada">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rua1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rua2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Localidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoPostal" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="eSatisfacao">
+        <s:restriction base="s:string">
+          <s:enumeration value="MuitoSatisfeito" />
+          <s:enumeration value="Satisfeito" />
+          <s:enumeration value="Neutro" />
+          <s:enumeration value="Insatisfeito" />
+          <s:enumeration value="MuitoInsatisfeito" />
+          <s:enumeration value="Nenhum" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="clsAnexo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NomeFicheiro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extensao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoAnexo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dados" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="eTipoIncidente">
+        <s:restriction base="s:string">
+          <s:enumeration value="TodosIncidentes" />
+          <s:enumeration value="IncidenteCliente" />
+          <s:enumeration value="Reclamacao" />
+          <s:enumeration value="ContratoMensal" />
+          <s:enumeration value="IncidenteEmEspera" />
+          <s:enumeration value="IncidenteIncentea" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="eTipoContrato">
+        <s:restriction base="s:string">
+          <s:enumeration value="SemContrato" />
+          <s:enumeration value="ContratoMensal" />
+          <s:enumeration value="PacoteCredito" />
+          <s:enumeration value="ProActivo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="DevolveTipoIncidentes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveTipoIncidentesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DevolveTipoIncidentesResult" type="tns:ArrayOfClsTipoIncidente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClsTipoIncidente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clsTipoIncidente" nillable="true" type="tns:clsTipoIncidente" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsTipoIncidente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DevolveIncidentesActivos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empresaID_arg" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoIncidente_arg" type="tns:eTipoIncidente" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveIncidentesActivosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DevolveIncidentesActivosResult" type="tns:ArrayOfClsIncidente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClsIncidente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clsIncidente" nillable="true" type="tns:clsIncidente" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DevolveMeusIncidentesActivos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="utilizadorID_arg" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="razaoEstado_arg" type="tns:RazaoEstado" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoIncidente_arg" type="tns:eTipoIncidente" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="RazaoEstado">
+        <s:restriction base="s:string">
+          <s:enumeration value="Todos" />
+          <s:enumeration value="EmCurso" />
+          <s:enumeration value="IncidenteSuspenso" />
+          <s:enumeration value="ProblemaResolvido" />
+          <s:enumeration value="Cancelado" />
+          <s:enumeration value="Registado" />
+          <s:enumeration value="Fechado" />
+          <s:enumeration value="RegistadoOnLine" />
+          <s:enumeration value="AprovadoOnLine" />
+          <s:enumeration value="EmEspera" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="DevolveMeusIncidentesActivosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DevolveMeusIncidentesActivosResult" type="tns:ArrayOfClsIncidente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveActividades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="incidentID_arg" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechado_arg" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveActividadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DevolveActividadesResult" type="tns:ArrayOfClsActividade" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClsActividade">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clsActividade" nillable="true" type="tns:clsActividade" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsActividade">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoIncidente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Assunto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataInicio" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataFim" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Servico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModoAssistencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recursos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DuracaoPrevista" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DuracaoReal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DuracaoDeslocacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroGuiaAssistencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescontoCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoDescontoCliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PeriodoFechoUltrapassado" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataFecho" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidadoCliente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValidadoPorID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidadoEm" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValidadoPorNome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumDeslocacoes" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumRefeicoes" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Visto" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescontoTecnico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoDescontoTecnico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescontoGestor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoDescontoGestor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescontoComercial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoDescontoComercial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VistoPorNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdIncidente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoIncidente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectoNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectoID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinhaContratoID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinhaContratoDescricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContratoContinuidadeGexor" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuporteGlobal" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="NCreditos" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActividadeDespesa" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="KmsFacturados" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DevolveActividadesEdicaoConta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="contaID_arg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveActividadesEdicaoContaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DevolveActividadesEdicaoContaResult" type="tns:ArrayOfClsActividade" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveActividadesEdicaoUtilizador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="utilizadorID_arg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveActividadesEdicaoUtilizadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DevolveActividadesEdicaoUtilizadorResult" type="tns:ArrayOfClsActividade" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterarActividade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="act_arg" type="tns:clsActividade" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterarActividadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlterarActividadeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActividade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actividadeID_arg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActividadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActividadeResult" type="tns:clsActividade" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveColaboradorInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_arg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevolveColaboradorInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DevolveColaboradorInfoResult" type="tns:clsColaborador" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clsColaborador">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Equipa" type="tns:clsEquipa" />
+          <s:element minOccurs="1" maxOccurs="1" name="GestorEquipa" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Administrador" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AcessoPicagem" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsEquipa">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CriarActividade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="act_arg" type="tns:clsActividade" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarActividadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CriarActividadeResult" type="tns:clsErro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clsErro">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Erro" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aviso" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErroDescricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvisoDescricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Texto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Texto2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="clsIncidente" nillable="true" type="tns:clsIncidente" />
+      <s:element name="ArrayOfClsTipoIncidente" nillable="true" type="tns:ArrayOfClsTipoIncidente" />
+      <s:element name="ArrayOfClsIncidente" nillable="true" type="tns:ArrayOfClsIncidente" />
+      <s:element name="ArrayOfClsActividade" nillable="true" type="tns:ArrayOfClsActividade" />
+      <s:element name="clsActividade" nillable="true" type="tns:clsActividade" />
+      <s:element name="clsColaborador" nillable="true" type="tns:clsColaborador" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidenteIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DevolveIncidenteID" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidenteIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DevolveIncidenteIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncidenteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncidente" />
+  </wsdl:message>
+  <wsdl:message name="GetIncidenteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncidenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevolveTipoIncidentesSoapIn">
+    <wsdl:part name="parameters" element="tns:DevolveTipoIncidentes" />
+  </wsdl:message>
+  <wsdl:message name="DevolveTipoIncidentesSoapOut">
+    <wsdl:part name="parameters" element="tns:DevolveTipoIncidentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidentesActivosSoapIn">
+    <wsdl:part name="parameters" element="tns:DevolveIncidentesActivos" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidentesActivosSoapOut">
+    <wsdl:part name="parameters" element="tns:DevolveIncidentesActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevolveMeusIncidentesActivosSoapIn">
+    <wsdl:part name="parameters" element="tns:DevolveMeusIncidentesActivos" />
+  </wsdl:message>
+  <wsdl:message name="DevolveMeusIncidentesActivosSoapOut">
+    <wsdl:part name="parameters" element="tns:DevolveMeusIncidentesActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesSoapIn">
+    <wsdl:part name="parameters" element="tns:DevolveActividades" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesSoapOut">
+    <wsdl:part name="parameters" element="tns:DevolveActividadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoContaSoapIn">
+    <wsdl:part name="parameters" element="tns:DevolveActividadesEdicaoConta" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoContaSoapOut">
+    <wsdl:part name="parameters" element="tns:DevolveActividadesEdicaoContaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoUtilizadorSoapIn">
+    <wsdl:part name="parameters" element="tns:DevolveActividadesEdicaoUtilizador" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoUtilizadorSoapOut">
+    <wsdl:part name="parameters" element="tns:DevolveActividadesEdicaoUtilizadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlterarActividadeSoapIn">
+    <wsdl:part name="parameters" element="tns:AlterarActividade" />
+  </wsdl:message>
+  <wsdl:message name="AlterarActividadeSoapOut">
+    <wsdl:part name="parameters" element="tns:AlterarActividadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActividadeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActividade" />
+  </wsdl:message>
+  <wsdl:message name="GetActividadeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActividadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevolveColaboradorInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:DevolveColaboradorInfo" />
+  </wsdl:message>
+  <wsdl:message name="DevolveColaboradorInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:DevolveColaboradorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CriarActividadeSoapIn">
+    <wsdl:part name="parameters" element="tns:CriarActividade" />
+  </wsdl:message>
+  <wsdl:message name="CriarActividadeSoapOut">
+    <wsdl:part name="parameters" element="tns:CriarActividadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidenteIDHttpGetIn">
+    <wsdl:part name="ticketnumber_arg" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidenteIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIncidenteHttpGetIn">
+    <wsdl:part name="incidenteID_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIncidenteHttpGetOut">
+    <wsdl:part name="Body" element="tns:clsIncidente" />
+  </wsdl:message>
+  <wsdl:message name="DevolveTipoIncidentesHttpGetIn">
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveTipoIncidentesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsTipoIncidente" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidentesActivosHttpGetIn">
+    <wsdl:part name="empresaID_arg" type="s:string" />
+    <wsdl:part name="tipoIncidente_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidentesActivosHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsIncidente" />
+  </wsdl:message>
+  <wsdl:message name="DevolveMeusIncidentesActivosHttpGetIn">
+    <wsdl:part name="utilizadorID_arg" type="s:string" />
+    <wsdl:part name="razaoEstado_arg" type="s:string" />
+    <wsdl:part name="tipoIncidente_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveMeusIncidentesActivosHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsIncidente" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesHttpGetIn">
+    <wsdl:part name="incidentID_arg" type="s:string" />
+    <wsdl:part name="fechado_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsActividade" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoContaHttpGetIn">
+    <wsdl:part name="contaID_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoContaHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsActividade" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoUtilizadorHttpGetIn">
+    <wsdl:part name="utilizadorID_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoUtilizadorHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsActividade" />
+  </wsdl:message>
+  <wsdl:message name="GetActividadeHttpGetIn">
+    <wsdl:part name="actividadeID_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActividadeHttpGetOut">
+    <wsdl:part name="Body" element="tns:clsActividade" />
+  </wsdl:message>
+  <wsdl:message name="DevolveColaboradorInfoHttpGetIn">
+    <wsdl:part name="user_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveColaboradorInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:clsColaborador" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidenteIDHttpPostIn">
+    <wsdl:part name="ticketnumber_arg" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidenteIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIncidenteHttpPostIn">
+    <wsdl:part name="incidenteID_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIncidenteHttpPostOut">
+    <wsdl:part name="Body" element="tns:clsIncidente" />
+  </wsdl:message>
+  <wsdl:message name="DevolveTipoIncidentesHttpPostIn">
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveTipoIncidentesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsTipoIncidente" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidentesActivosHttpPostIn">
+    <wsdl:part name="empresaID_arg" type="s:string" />
+    <wsdl:part name="tipoIncidente_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveIncidentesActivosHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsIncidente" />
+  </wsdl:message>
+  <wsdl:message name="DevolveMeusIncidentesActivosHttpPostIn">
+    <wsdl:part name="utilizadorID_arg" type="s:string" />
+    <wsdl:part name="razaoEstado_arg" type="s:string" />
+    <wsdl:part name="tipoIncidente_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveMeusIncidentesActivosHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsIncidente" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesHttpPostIn">
+    <wsdl:part name="incidentID_arg" type="s:string" />
+    <wsdl:part name="fechado_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsActividade" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoContaHttpPostIn">
+    <wsdl:part name="contaID_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoContaHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsActividade" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoUtilizadorHttpPostIn">
+    <wsdl:part name="utilizadorID_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveActividadesEdicaoUtilizadorHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsActividade" />
+  </wsdl:message>
+  <wsdl:message name="GetActividadeHttpPostIn">
+    <wsdl:part name="actividadeID_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActividadeHttpPostOut">
+    <wsdl:part name="Body" element="tns:clsActividade" />
+  </wsdl:message>
+  <wsdl:message name="DevolveColaboradorInfoHttpPostIn">
+    <wsdl:part name="user_arg" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DevolveColaboradorInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:clsColaborador" />
+  </wsdl:message>
+  <wsdl:portType name="ClientServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidenteID">
+      <wsdl:input message="tns:DevolveIncidenteIDSoapIn" />
+      <wsdl:output message="tns:DevolveIncidenteIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidente">
+      <wsdl:input message="tns:GetIncidenteSoapIn" />
+      <wsdl:output message="tns:GetIncidenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveTipoIncidentes">
+      <wsdl:input message="tns:DevolveTipoIncidentesSoapIn" />
+      <wsdl:output message="tns:DevolveTipoIncidentesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidentesActivos">
+      <wsdl:input message="tns:DevolveIncidentesActivosSoapIn" />
+      <wsdl:output message="tns:DevolveIncidentesActivosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveMeusIncidentesActivos">
+      <wsdl:input message="tns:DevolveMeusIncidentesActivosSoapIn" />
+      <wsdl:output message="tns:DevolveMeusIncidentesActivosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividades">
+      <wsdl:input message="tns:DevolveActividadesSoapIn" />
+      <wsdl:output message="tns:DevolveActividadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoConta">
+      <wsdl:input message="tns:DevolveActividadesEdicaoContaSoapIn" />
+      <wsdl:output message="tns:DevolveActividadesEdicaoContaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoUtilizador">
+      <wsdl:input message="tns:DevolveActividadesEdicaoUtilizadorSoapIn" />
+      <wsdl:output message="tns:DevolveActividadesEdicaoUtilizadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarActividade">
+      <wsdl:input message="tns:AlterarActividadeSoapIn" />
+      <wsdl:output message="tns:AlterarActividadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActividade">
+      <wsdl:input message="tns:GetActividadeSoapIn" />
+      <wsdl:output message="tns:GetActividadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveColaboradorInfo">
+      <wsdl:input message="tns:DevolveColaboradorInfoSoapIn" />
+      <wsdl:output message="tns:DevolveColaboradorInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CriarActividade">
+      <wsdl:input message="tns:CriarActividadeSoapIn" />
+      <wsdl:output message="tns:CriarActividadeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ClientServiceHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidenteID">
+      <wsdl:input message="tns:DevolveIncidenteIDHttpGetIn" />
+      <wsdl:output message="tns:DevolveIncidenteIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidente">
+      <wsdl:input message="tns:GetIncidenteHttpGetIn" />
+      <wsdl:output message="tns:GetIncidenteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveTipoIncidentes">
+      <wsdl:input message="tns:DevolveTipoIncidentesHttpGetIn" />
+      <wsdl:output message="tns:DevolveTipoIncidentesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidentesActivos">
+      <wsdl:input message="tns:DevolveIncidentesActivosHttpGetIn" />
+      <wsdl:output message="tns:DevolveIncidentesActivosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveMeusIncidentesActivos">
+      <wsdl:input message="tns:DevolveMeusIncidentesActivosHttpGetIn" />
+      <wsdl:output message="tns:DevolveMeusIncidentesActivosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividades">
+      <wsdl:input message="tns:DevolveActividadesHttpGetIn" />
+      <wsdl:output message="tns:DevolveActividadesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoConta">
+      <wsdl:input message="tns:DevolveActividadesEdicaoContaHttpGetIn" />
+      <wsdl:output message="tns:DevolveActividadesEdicaoContaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoUtilizador">
+      <wsdl:input message="tns:DevolveActividadesEdicaoUtilizadorHttpGetIn" />
+      <wsdl:output message="tns:DevolveActividadesEdicaoUtilizadorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActividade">
+      <wsdl:input message="tns:GetActividadeHttpGetIn" />
+      <wsdl:output message="tns:GetActividadeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveColaboradorInfo">
+      <wsdl:input message="tns:DevolveColaboradorInfoHttpGetIn" />
+      <wsdl:output message="tns:DevolveColaboradorInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ClientServiceHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidenteID">
+      <wsdl:input message="tns:DevolveIncidenteIDHttpPostIn" />
+      <wsdl:output message="tns:DevolveIncidenteIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidente">
+      <wsdl:input message="tns:GetIncidenteHttpPostIn" />
+      <wsdl:output message="tns:GetIncidenteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveTipoIncidentes">
+      <wsdl:input message="tns:DevolveTipoIncidentesHttpPostIn" />
+      <wsdl:output message="tns:DevolveTipoIncidentesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidentesActivos">
+      <wsdl:input message="tns:DevolveIncidentesActivosHttpPostIn" />
+      <wsdl:output message="tns:DevolveIncidentesActivosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveMeusIncidentesActivos">
+      <wsdl:input message="tns:DevolveMeusIncidentesActivosHttpPostIn" />
+      <wsdl:output message="tns:DevolveMeusIncidentesActivosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividades">
+      <wsdl:input message="tns:DevolveActividadesHttpPostIn" />
+      <wsdl:output message="tns:DevolveActividadesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoConta">
+      <wsdl:input message="tns:DevolveActividadesEdicaoContaHttpPostIn" />
+      <wsdl:output message="tns:DevolveActividadesEdicaoContaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoUtilizador">
+      <wsdl:input message="tns:DevolveActividadesEdicaoUtilizadorHttpPostIn" />
+      <wsdl:output message="tns:DevolveActividadesEdicaoUtilizadorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActividade">
+      <wsdl:input message="tns:GetActividadeHttpPostIn" />
+      <wsdl:output message="tns:GetActividadeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolveColaboradorInfo">
+      <wsdl:input message="tns:DevolveColaboradorInfoHttpPostIn" />
+      <wsdl:output message="tns:DevolveColaboradorInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClientServiceSoap" type="tns:ClientServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidenteID">
+      <soap:operation soapAction="http://tempuri.org/DevolveIncidenteID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidente">
+      <soap:operation soapAction="http://tempuri.org/GetIncidente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveTipoIncidentes">
+      <soap:operation soapAction="http://tempuri.org/DevolveTipoIncidentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidentesActivos">
+      <soap:operation soapAction="http://tempuri.org/DevolveIncidentesActivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveMeusIncidentesActivos">
+      <soap:operation soapAction="http://tempuri.org/DevolveMeusIncidentesActivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividades">
+      <soap:operation soapAction="http://tempuri.org/DevolveActividades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoConta">
+      <soap:operation soapAction="http://tempuri.org/DevolveActividadesEdicaoConta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoUtilizador">
+      <soap:operation soapAction="http://tempuri.org/DevolveActividadesEdicaoUtilizador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarActividade">
+      <soap:operation soapAction="http://tempuri.org/AlterarActividade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActividade">
+      <soap:operation soapAction="http://tempuri.org/GetActividade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveColaboradorInfo">
+      <soap:operation soapAction="http://tempuri.org/DevolveColaboradorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarActividade">
+      <soap:operation soapAction="http://tempuri.org/CriarActividade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClientServiceSoap12" type="tns:ClientServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidenteID">
+      <soap12:operation soapAction="http://tempuri.org/DevolveIncidenteID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidente">
+      <soap12:operation soapAction="http://tempuri.org/GetIncidente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveTipoIncidentes">
+      <soap12:operation soapAction="http://tempuri.org/DevolveTipoIncidentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidentesActivos">
+      <soap12:operation soapAction="http://tempuri.org/DevolveIncidentesActivos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveMeusIncidentesActivos">
+      <soap12:operation soapAction="http://tempuri.org/DevolveMeusIncidentesActivos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividades">
+      <soap12:operation soapAction="http://tempuri.org/DevolveActividades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoConta">
+      <soap12:operation soapAction="http://tempuri.org/DevolveActividadesEdicaoConta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoUtilizador">
+      <soap12:operation soapAction="http://tempuri.org/DevolveActividadesEdicaoUtilizador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarActividade">
+      <soap12:operation soapAction="http://tempuri.org/AlterarActividade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActividade">
+      <soap12:operation soapAction="http://tempuri.org/GetActividade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveColaboradorInfo">
+      <soap12:operation soapAction="http://tempuri.org/DevolveColaboradorInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarActividade">
+      <soap12:operation soapAction="http://tempuri.org/CriarActividade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClientServiceHttpGet" type="tns:ClientServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidenteID">
+      <http:operation location="/DevolveIncidenteID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidente">
+      <http:operation location="/GetIncidente" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveTipoIncidentes">
+      <http:operation location="/DevolveTipoIncidentes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidentesActivos">
+      <http:operation location="/DevolveIncidentesActivos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveMeusIncidentesActivos">
+      <http:operation location="/DevolveMeusIncidentesActivos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividades">
+      <http:operation location="/DevolveActividades" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoConta">
+      <http:operation location="/DevolveActividadesEdicaoConta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoUtilizador">
+      <http:operation location="/DevolveActividadesEdicaoUtilizador" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActividade">
+      <http:operation location="/GetActividade" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveColaboradorInfo">
+      <http:operation location="/DevolveColaboradorInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClientServiceHttpPost" type="tns:ClientServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidenteID">
+      <http:operation location="/DevolveIncidenteID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidente">
+      <http:operation location="/GetIncidente" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveTipoIncidentes">
+      <http:operation location="/DevolveTipoIncidentes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveIncidentesActivos">
+      <http:operation location="/DevolveIncidentesActivos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveMeusIncidentesActivos">
+      <http:operation location="/DevolveMeusIncidentesActivos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividades">
+      <http:operation location="/DevolveActividades" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoConta">
+      <http:operation location="/DevolveActividadesEdicaoConta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveActividadesEdicaoUtilizador">
+      <http:operation location="/DevolveActividadesEdicaoUtilizador" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActividade">
+      <http:operation location="/GetActividade" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolveColaboradorInfo">
+      <http:operation location="/DevolveColaboradorInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClientService">
+    <wsdl:port name="ClientServiceSoap" binding="tns:ClientServiceSoap">
+      <soap:address location="http://lhv-a6/wscliente2016/clientservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClientServiceSoap12" binding="tns:ClientServiceSoap12">
+      <soap12:address location="http://lhv-a6/wscliente2016/clientservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClientServiceHttpGet" binding="tns:ClientServiceHttpGet">
+      <http:address location="http://lhv-a6/wscliente2016/clientservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClientServiceHttpPost" binding="tns:ClientServiceHttpPost">
+      <http:address location="http://lhv-a6/wscliente2016/clientservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

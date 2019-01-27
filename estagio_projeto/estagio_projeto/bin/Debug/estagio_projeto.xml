@@ -1,0 +1,941 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+estagio_projeto
+</name>
+</assembly>
+<members>
+<member name="T:estagio_projeto.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:estagio_projeto.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:estagio_projeto.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:estagio_projeto.My.Resources.Resources.gnome_panel_force_quit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:estagio_projeto.My.Resources.Resources.Login">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:estagio_projeto.My.Resources.Resources.voltar_atras">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.AtividadeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.IncidenteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.UtilizadoresDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.AtividadeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.IncidenteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.UtilizadoresRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.AtividadeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.IncidenteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSet.UtilizadoresRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSetTableAdapters.AtividadeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSetTableAdapters.IncidenteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSetTableAdapters.UtilizadoresTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:estagio_projeto.incidenteDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(estagio_projeto.incidenteDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:estagio_projeto.incidenteDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(estagio_projeto.incidenteDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:estagio_projeto.incidenteDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(estagio_projeto.incidenteDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:estagio_projeto.incidenteDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:estagio_projeto.incidenteDataSetTableAdapters.TableAdapterManager.UpdateAll(estagio_projeto.incidenteDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:estagio_projeto.incidenteDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:estagio_projeto.webserver.ClientService">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.#ctor">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.HelloWorldCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.DevolveIncidenteIDCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.GetIncidenteCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.DevolveTipoIncidentesCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.DevolveIncidentesActivosCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.DevolveMeusIncidentesActivosCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.DevolveActividadesCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.DevolveActividadesEdicaoContaCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.DevolveActividadesEdicaoUtilizadorCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.AlterarActividadeCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.GetActividadeCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.DevolveColaboradorInfoCompleted">
+<remarks/>
+</member>
+<member name="E:estagio_projeto.webserver.ClientService.CriarActividadeCompleted">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.HelloWorld">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.HelloWorldAsync">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.HelloWorldAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveIncidenteID(System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveIncidenteIDAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveIncidenteIDAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.GetIncidente(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.GetIncidenteAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.GetIncidenteAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveTipoIncidentes(System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveTipoIncidentesAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveTipoIncidentesAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveIncidentesActivos(System.String,estagio_projeto.webserver.eTipoIncidente,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveIncidentesActivosAsync(System.String,estagio_projeto.webserver.eTipoIncidente,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveIncidentesActivosAsync(System.String,estagio_projeto.webserver.eTipoIncidente,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveMeusIncidentesActivos(System.String,estagio_projeto.webserver.RazaoEstado,estagio_projeto.webserver.eTipoIncidente,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveMeusIncidentesActivosAsync(System.String,estagio_projeto.webserver.RazaoEstado,estagio_projeto.webserver.eTipoIncidente,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveMeusIncidentesActivosAsync(System.String,estagio_projeto.webserver.RazaoEstado,estagio_projeto.webserver.eTipoIncidente,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividades(System.String,System.Boolean,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividadesAsync(System.String,System.Boolean,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividadesAsync(System.String,System.Boolean,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividadesEdicaoConta(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividadesEdicaoContaAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividadesEdicaoContaAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividadesEdicaoUtilizador(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividadesEdicaoUtilizadorAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveActividadesEdicaoUtilizadorAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.AlterarActividade(estagio_projeto.webserver.clsActividade)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.AlterarActividadeAsync(estagio_projeto.webserver.clsActividade)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.AlterarActividadeAsync(estagio_projeto.webserver.clsActividade,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.GetActividade(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.GetActividadeAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.GetActividadeAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveColaboradorInfo(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveColaboradorInfoAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.DevolveColaboradorInfoAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.CriarActividade(estagio_projeto.webserver.clsActividade,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.CriarActividadeAsync(estagio_projeto.webserver.clsActividade,System.String)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.CriarActividadeAsync(estagio_projeto.webserver.clsActividade,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:estagio_projeto.webserver.ClientService.CancelAsync(System.Object)">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsIncidente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ClienteID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ClienteNome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ContactoID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ContactoNome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Resumo">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Descricao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DataAbertura">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DataInicio">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DataFecho">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DataSolucionamento">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Prioridade">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.PrioridadeID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Numero">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Estado">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.RazaoEstado">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.SLASD">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.SLASD_Dec">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Assunto">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ClsAssunto">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ProprietarioNome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ProprietarioID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Morada">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.AprovadoPor">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DataAprovacao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Impacto">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Urgencia">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DuracaoTotal">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DescontoTotal">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DuracaoTotalLiquido">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DuracaoTotalDec">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DescontoTotalDec">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Validado">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Observacoes">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.GrauSatisfacao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.NumeroRefeicoes">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.NumeroEstadias">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.NumeroDeslocacoesAC">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.NumeroDeslocacoes">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.SolucionadoPorNome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.SolucionadoPorID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.PeriodoSolucionamentoUltrapassado">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.DataNaoSolucionamento">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Anexo">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.TempoResolucao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.TipoIncidente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.TipoAssistencia">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.TipoPedido">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.ContratoID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.LinhaContratoID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.MotivoatrasoSlaSD">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.OrigemID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.TipoContrato">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.Agendamento">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.EmpresaID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsIncidente.CriadoPor">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsAssunto">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAssunto.Nome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAssunto.ID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAssunto.CodigoAssuntoGeral">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAssunto.IDAssuntoGeral">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAssunto.AssuntoInterno">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsErro">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsErro.Erro">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsErro.Aviso">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsErro.ErroDescricao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsErro.AvisoDescricao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsErro.Texto">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsErro.Texto2">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsEquipa">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsEquipa.ID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsEquipa.Nome">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsColaborador">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsColaborador.ID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsColaborador.Nome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsColaborador.Equipa">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsColaborador.GestorEquipa">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsColaborador.Administrador">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsColaborador.AcessoPicagem">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsActividade">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.CodigoIncidente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.Assunto">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.Descricao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DataInicio">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DataFim">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.Servico">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ModoAssistencia">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.Recursos">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DuracaoPrevista">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DuracaoReal">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DuracaoDeslocacao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.NumeroGuiaAssistencia">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescontoCliente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescricaoDescontoCliente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.PeriodoFechoUltrapassado">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.Estado">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DataFecho">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ValidadoCliente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ValidadoPorID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ValidadoEm">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ValidadoPorNome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.NumDeslocacoes">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.NumRefeicoes">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.Visto">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.IDCliente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.NomeCliente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescontoTecnico">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescricaoDescontoTecnico">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescontoGestor">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescricaoDescontoGestor">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescontoComercial">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescricaoDescontoComercial">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.VistoPorNome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.IdIncidente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.DescricaoIncidente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ProjectoNome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ProjectoID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.LinhaContratoID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.LinhaContratoDescricao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ContratoContinuidadeGexor">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.SuporteGlobal">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.NCreditos">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.ActividadeDespesa">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsActividade.KmsFacturados">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsTipoIncidente">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsTipoIncidente.ID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsTipoIncidente.Descricao">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsAnexo">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAnexo.NomeFicheiro">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAnexo.Extensao">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAnexo.TipoAnexo">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsAnexo.Dados">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.clsMorada">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsMorada.ID">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsMorada.Nome">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsMorada.Rua1">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsMorada.Rua2">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsMorada.Localidade">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.clsMorada.CodigoPostal">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.eSatisfacao">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eSatisfacao.MuitoSatisfeito">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eSatisfacao.Satisfeito">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eSatisfacao.Neutro">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eSatisfacao.Insatisfeito">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eSatisfacao.MuitoInsatisfeito">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eSatisfacao.Nenhum">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.eTipoIncidente">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoIncidente.TodosIncidentes">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoIncidente.IncidenteCliente">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoIncidente.Reclamacao">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoIncidente.ContratoMensal">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoIncidente.IncidenteEmEspera">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoIncidente.IncidenteIncentea">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.eTipoContrato">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoContrato.SemContrato">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoContrato.ContratoMensal">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoContrato.PacoteCredito">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.eTipoContrato.ProActivo">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.RazaoEstado">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.Todos">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.EmCurso">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.IncidenteSuspenso">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.ProblemaResolvido">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.Cancelado">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.Registado">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.Fechado">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.RegistadoOnLine">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.AprovadoOnLine">
+<remarks/>
+</member>
+<member name="F:estagio_projeto.webserver.RazaoEstado.EmEspera">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.HelloWorldCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.HelloWorldCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.HelloWorldCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveIncidenteIDCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveIncidenteIDCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.DevolveIncidenteIDCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.GetIncidenteCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.GetIncidenteCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.GetIncidenteCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveTipoIncidentesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveTipoIncidentesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.DevolveTipoIncidentesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveIncidentesActivosCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveIncidentesActivosCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.DevolveIncidentesActivosCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveMeusIncidentesActivosCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveMeusIncidentesActivosCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.DevolveMeusIncidentesActivosCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveActividadesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveActividadesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.DevolveActividadesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveActividadesEdicaoContaCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveActividadesEdicaoContaCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.DevolveActividadesEdicaoContaCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveActividadesEdicaoUtilizadorCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveActividadesEdicaoUtilizadorCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.DevolveActividadesEdicaoUtilizadorCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.AlterarActividadeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.AlterarActividadeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.AlterarActividadeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.GetActividadeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.GetActividadeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.GetActividadeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveColaboradorInfoCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.DevolveColaboradorInfoCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.DevolveColaboradorInfoCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.CriarActividadeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:estagio_projeto.webserver.CriarActividadeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:estagio_projeto.webserver.CriarActividadeCompletedEventArgs.Result">
+<remarks/>
+</member>
+</members>
+</doc>
